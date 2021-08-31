@@ -9,6 +9,7 @@ import GameReviewsList from './components/GameReviewsList';
 import GameReviewForm from './components/GameReviewForm';
 import GameReview from './components/GameReview';
 import Navbar from './components/Navbar';
+import Home from './components/Home';
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
     fetch('http://localhost:3000/games')
     .then(res => res.json())
     .then(data => {
-      console.log(data)
+      setReviews(data)
     })
   }, [])
 
@@ -34,10 +35,14 @@ function App() {
         <Switch>
 
           <Route exact path="/">
+            <Home/>
+          </Route>
+
+          <Route exact path="/games"> 
             <GameReviewsList reviews={reviews}/>
           </Route>
 
-          <Route exact path="/games/new">
+          <Route exact path="/games/add-new">
             <GameReviewForm/>
           </Route>
 

@@ -5,7 +5,9 @@ function Navbar(props){
 
     return (
         <nav>
-            <Link to="/">Game reviews🕹💯</Link>
+            <Link to="/">Home 🏠 </Link>
+            <br/>
+            <Link to="/games">Game reviews🕹💯</Link>
             <br/>
             <Link to="/games/new">Add a review here 👀</Link>
         </nav>
