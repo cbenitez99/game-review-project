@@ -12,6 +12,16 @@ import Home from './components/Home';
 
 function App() {
 
+  const [formData, setFormData] = useState({
+    image: "",
+    title: "",
+    rating: 0,
+    price: 0,
+    platform: "",
+    review: "",
+    user: ""
+})
+
   const [reviews, setReviews] = useState([])
 
   useEffect(()=>{
@@ -24,7 +34,6 @@ function App() {
 
   return (
     <div className="App">
-      <h2>WELCOME TO THE ULTIMATE GAME REVIEWER</h2>
       <Router>
 
         <Navbar/>
@@ -40,11 +49,11 @@ function App() {
           </Route>
 
           <Route exact path="/games/new">
-            <GameReviewForm reviews={reviews}/>
+            <GameReviewForm formData={formData} reviews={reviews}/>
           </Route>
 
         </Switch>
-        
+
       </Router>
 
     </div>

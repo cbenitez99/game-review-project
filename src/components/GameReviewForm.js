@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 
-function GameReviewForm (props){
+function GameReviewForm ({formData, reviews}){
+   
+    const [firstName, setFirstName] = useState("")
+    const [lastName, setLastName] = useState("")
+
+    function handleFirstName(event) {
+        setFirstName(event.target.value);
+      }
+      
+      function handleLastName(event) {
+        setLastName(event.target.value);
+      }
 
     return (
-
-        <p>Custom Game Review</p>
-
+        <form>
+            <input type="text" onChange={handleFirstName} value={firstName}/>
+            <input type="text" onChange={handleLastName} value={lastName}/>
+            <br/>
+            <textarea type="text"/>
+            <br/>
+            <button type="submit">Add Review</button>
+        </form>
     )
 }
 

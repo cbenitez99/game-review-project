@@ -1,5 +1,15 @@
 .App {
   text-align: center;
 }
+ 
+.game-card {
+  border: solid 10px black;
+  margin: 5em;
+  padding: 20px;
+}
 
+.main-page {
+  background-image: url("https://i.pcmag.com/imagery/articles/03kaMbDH35Xhs9F4U06JzSB-3.1613573439.fit_lim.size_1600x900.jpg");
+  background-repeat: no-repeat;
+}
 

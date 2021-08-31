@@ -1,15 +1,13 @@
 import React from "react"
-import {Link} from "react-router-dom"
+import { NavLink} from "react-router-dom"
 
 function Navbar(){
 
     return (
-        <nav>
-            <Link to="/">Home 🏠 </Link>
-            <br/>
-            <Link to="/games">Game reviews🕹💯</Link>
-            <br/>
-            <Link to="/games/new">Add a review here 👀</Link>
+        <nav id="navbar">
+    
+            <NavLink to="/">Home 🏠</NavLink> | <NavLink to="/games">Game reviews🕹💯</NavLink> | <NavLink to="/games/new">Add a review here 👀</NavLink>
+            
         </nav>
         
     )

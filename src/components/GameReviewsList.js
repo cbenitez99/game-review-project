@@ -9,6 +9,7 @@ function GameReviewsList({reviews}){
 
     return (
         <div>
+            <h1>Reviewed Games:</h1>
             {mappedReviews}
         </div>
     )
