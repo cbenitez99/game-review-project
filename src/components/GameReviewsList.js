@@ -1,17 +1,15 @@
 import React from "react";
 import GameCard from './GameCard';
 
-
 function GameReviewsList({reviews}){
 
-    const reviewz = reviews.map((review) => {
+    const mappedReviews = reviews.map((review) => {
         return <GameCard key={review.id} review={review}/>
     })
 
-
     return (
-        <div className="list-card">
-            {reviewz}
+        <div>
+            {mappedReviews}
         </div>
     )
 }

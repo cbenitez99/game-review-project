@@ -7,7 +7,6 @@ import {
 } from "react-router-dom"
 import GameReviewsList from './components/GameReviewsList';
 import GameReviewForm from './components/GameReviewForm';
-import GameReview from './components/GameReview';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 
@@ -22,8 +21,6 @@ function App() {
       setReviews(data)
     })
   }, [])
-
-
 
   return (
     <div className="App">
@@ -42,15 +39,12 @@ function App() {
             <GameReviewsList reviews={reviews}/>
           </Route>
 
-          <Route exact path="/games/add-new">
-            <GameReviewForm/>
-          </Route>
-
-          <Route exact path="/games/:id">
-            <GameReview/>
+          <Route exact path="/games/new">
+            <GameReviewForm reviews={reviews}/>
           </Route>
 
         </Switch>
+        
       </Router>
 
     </div>

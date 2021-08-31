@@ -2,11 +2,8 @@ import React from "react";
 
 function Home(){
     return (
-        <p>Home</p>
+        <p>Click a link above to navigate!</p>
     )
 }
-
-
-
 
 export default Home;
