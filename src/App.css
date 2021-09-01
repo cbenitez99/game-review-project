@@ -1,50 +1,71 @@
 .App {
   text-align: center;
 }
+
  
 .game-card {
   border: solid 10px black;
   margin: 5em;
   padding: 20px;
+  background-color: aliceblue;
+}
+
+.game-card * {
+  margin-bottom: 0;
+}
+
+.game-card button {
+  margin-top: 20px;
 }
 
 .main-page {
   background-image: url("https://i.pcmag.com/imagery/articles/03kaMbDH35Xhs9F4U06JzSB-3.1613573439.fit_lim.size_1600x900.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
-#title {
-  margin-top: 5px;
-  height: 2em;
+#list {
+  background-color: #64BED4;
+  margin-top: -22px;
+  margin-bottom: -100px;
 }
-#price {
-  margin-top: 5px;
-  height: 2em;
-}
-#image {
-  margin-top: 5px;
-  height: 2em;
-}
-#platform {
-  margin-top: 5px;
-  height: 2em;
-}
-#review {
-  margin-top: 5px;
-}
-#user{
-  margin-top: 5px;
-  height: 2em;
-}
-#rating {
-  margin-top: 5px;
-  height: 2em;
-  width: 10em;
+
+#navbar {
+  color: #64BED4;
+  background-color: #64BED4;
+  margin-bottom: 0;
 }
 
 #button {
   margin-top: 5px;
   height: 2em;
+  font-family: impact, fantasy;
+  color: black;
+  background-color: aliceblue;
+}
+
+input, textarea {
+  margin-top: 25px;
+  height: 2em;
+  width: 15em;
+  background-color: #64BED4;
+  color: white;
+  font-family: impact, fantasy;
+  font-size: large;
+}
+
+form {
+  padding: 2em;
+  background-color: #64BED4;
+  margin-top: 6em;
+  width: 20em;
+  position: relative;
+  left: 50%;
+  margin-left: -12em;
+}
+
+::placeholder {
+  color: black;
 }
 
 

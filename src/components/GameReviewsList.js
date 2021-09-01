@@ -8,7 +8,7 @@ function GameReviewsList({reviews, handleDelete}){
     })
 
     return (
-        <div>
+        <div id="list">
             <h1>Reviewed Games:</h1>
             {mappedReviews}
         </div>
