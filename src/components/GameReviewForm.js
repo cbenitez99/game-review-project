@@ -35,9 +35,9 @@ function GameReviewForm ({handlePost}){
             <br/>
             <input id="title" type="text" placeholder="Enter Game Title Here" onChange={handleChange} value={formData.title}/>
             <br/>
-            <input id="rating" type="number" placeholder="Rate from 1-5" onChange={handleChange} value={formData.rating}/>
+            <input max="5" min="1" step="0.5" id="rating" type="number" placeholder="Rate from 1-5" onChange={handleChange} value={formData.rating}/>
             <br/>
-            <input id="price" type="text" placeholder="Enter Game Price Here" onChange={handleChange} value={formData.price}/>
+            <span>$</span><input id="price" type="text" placeholder="Enter Game Price Here" onChange={handleChange} value={formData.price}/>
             <br/>
             <input id="platform" type="text" placeholder="Enter Platform Here" onChange={handleChange} value={formData.platform}/>
             <br/>

@@ -1,7 +1,7 @@
 import React from "react"
 
-function GameCard({review}){
-   
+function GameCard({review, handleDelete}){
+
     return (
         <div className="game-card">
             <img alt={review.title} src={review.image}/>
@@ -11,6 +11,7 @@ function GameCard({review}){
             <em><h4>{review.platform}</h4></em>
             <h5>"{review.review}"</h5>
             <p> -{review.user}</p>
+            <button onClick={()=> handleDelete(review.id)}>Remove Review</button>
         </div>
     )
 }

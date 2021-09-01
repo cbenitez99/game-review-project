@@ -14,6 +14,18 @@ function App() {
 
   const [reviews, setReviews] = useState([])
 
+  function handleDelete(id) {
+    const removedReviews = reviews.filter(review => {
+      return (review.id !== id)
+    })
+    setReviews(removedReviews)
+    const options = {
+      method: "DELETE",
+      headers: {'Content-Type':'application/json'},
+    }
+    fetch(`http://localhost:3000/games/${id}`, options)
+  }
+
   useEffect(()=>{
     fetch('http://localhost:3000/games')
     .then(res => res.json())
@@ -39,7 +51,7 @@ function App() {
           </Route>
 
           <Route exact path="/games"> 
-            <GameReviewsList reviews={reviews}/>
+            <GameReviewsList reviews={reviews} handleDelete={handleDelete}/>
           </Route>
 
           <Route exact path="/games/new">
