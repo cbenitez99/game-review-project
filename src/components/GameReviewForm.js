@@ -26,6 +26,7 @@ function GameReviewForm ({handlePost}){
     
     function handleChange(event) {
         setFormData({...formData, [event.target.id] : event.target.value,});
+
       }
 
     return (
@@ -34,7 +35,7 @@ function GameReviewForm ({handlePost}){
             <br/>
             <input id="title" type="text" placeholder="Enter Game Title Here" onChange={handleChange} value={formData.title}/>
             <br/>
-            <input id="rating" type="number" placeholder="Star Rating Here" onChange={handleChange} value={formData.rating}/>
+            <input id="rating" type="number" placeholder="Rate from 1-5" onChange={handleChange} value={formData.rating}/>
             <br/>
             <input id="price" type="text" placeholder="Enter Game Price Here" onChange={handleChange} value={formData.price}/>
             <br/>
@@ -44,7 +45,7 @@ function GameReviewForm ({handlePost}){
             <br/>
             <input id="user" type="text" placeholder="Enter Your Name" onChange={handleChange} value={formData.user}/>
             <br/>
-            <button type="submit">Add Review</button>
+            <button id="button" type="submit">Add Review</button>
         </form>
     )
 }

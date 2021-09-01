@@ -13,3 +13,38 @@
   background-repeat: no-repeat;
 }
 
+#title {
+  margin-top: 5px;
+  height: 2em;
+}
+#price {
+  margin-top: 5px;
+  height: 2em;
+}
+#image {
+  margin-top: 5px;
+  height: 2em;
+}
+#platform {
+  margin-top: 5px;
+  height: 2em;
+}
+#review {
+  margin-top: 5px;
+}
+#user{
+  margin-top: 5px;
+  height: 2em;
+}
+#rating {
+  margin-top: 5px;
+  height: 2em;
+}
+
+#button {
+  margin-top: 5px;
+  height: 2em;
+}
+
+
+
