@@ -1,24 +1,48 @@
 import React, { useState } from "react";
 
-function GameReviewForm ({formData, reviews}){
-   
-    const [firstName, setFirstName] = useState("")
-    const [lastName, setLastName] = useState("")
+function GameReviewForm ({handlePost}){   
 
-    function handleFirstName(event) {
-        setFirstName(event.target.value);
+  const [formData, setFormData] = useState({
+    image: "",
+    title: "",
+    rating: "",
+    price: "",
+    platform: "",
+    review: "",
+    user: "",
+  })
+
+    function handleSubmit(){
+      const URL = 'http://localhost:3000/games'
+      const options = {
+        method: "POST",
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify(formData)
       }
-      
-      function handleLastName(event) {
-        setLastName(event.target.value);
+      fetch(URL, options)
+      .then(res => res.json())
+      .then(data => handlePost(...data,[formData]))
+    }
+    
+    function handleChange(event) {
+        setFormData({...formData, [event.target.id] : event.target.value,});
       }
 
     return (
-        <form>
-            <input type="text" onChange={handleFirstName} value={firstName}/>
-            <input type="text" onChange={handleLastName} value={lastName}/>
+        <form onSubmit={handleSubmit}>
+            <input id="image" type="text" placeholder="Paste Image URL Here" onChange={handleChange} value={formData.image}/>
             <br/>
-            <textarea type="text"/>
+            <input id="title" type="text" placeholder="Enter Game Title Here" onChange={handleChange} value={formData.title}/>
+            <br/>
+            <input id="rating" type="number" placeholder="Star Rating Here" onChange={handleChange} value={formData.rating}/>
+            <br/>
+            <input id="price" type="text" placeholder="Enter Game Price Here" onChange={handleChange} value={formData.price}/>
+            <br/>
+            <input id="platform" type="text" placeholder="Enter Platform Here" onChange={handleChange} value={formData.platform}/>
+            <br/>
+            <textarea id="review" type="text" placeholder="Write Review..." onChange={handleChange} value={formData.review}/>
+            <br/>
+            <input id="user" type="text" placeholder="Enter Your Name" onChange={handleChange} value={formData.user}/>
             <br/>
             <button type="submit">Add Review</button>
         </form>

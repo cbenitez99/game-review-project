@@ -12,16 +12,6 @@ import Home from './components/Home';
 
 function App() {
 
-  const [formData, setFormData] = useState({
-    image: "",
-    title: "",
-    rating: 0,
-    price: 0,
-    platform: "",
-    review: "",
-    user: ""
-})
-
   const [reviews, setReviews] = useState([])
 
   useEffect(()=>{
@@ -31,6 +21,10 @@ function App() {
       setReviews(data)
     })
   }, [])
+  console.log(reviews)
+  function handlePost(newReview){
+    setReviews(newReview)
+  }
 
   return (
     <div className="App">
@@ -49,7 +43,7 @@ function App() {
           </Route>
 
           <Route exact path="/games/new">
-            <GameReviewForm formData={formData} reviews={reviews}/>
+            <GameReviewForm handlePost={handlePost} reviews={reviews}/>
           </Route>
 
         </Switch>
