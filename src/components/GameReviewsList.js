@@ -9,7 +9,10 @@ function GameReviewsList({reviews, handleDelete}){
 
     return (
         <div id="list">
-            <h1>Reviewed Games:</h1>
+            <br/>
+            <br/>
+            <br/>
+            <h1>Reviewed Games</h1>
             {mappedReviews}
         </div>
     )
