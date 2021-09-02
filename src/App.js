@@ -33,13 +33,14 @@ function App() {
       setReviews(data)
     })
   }, [])
-  console.log(reviews)
+  
   function handlePost(newReview){
     setReviews(newReview)
   }
 
   return (
     <div className="App">
+      
       <Router>
 
         <Navbar/>
