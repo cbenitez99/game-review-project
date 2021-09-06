@@ -9,7 +9,7 @@ function GameReviewForm ({handlePost}){
     price: "",
     platform: "",
     review: "",
-    user: "",
+    user: ""
   })
 
     function handleSubmit(){
@@ -23,10 +23,9 @@ function GameReviewForm ({handlePost}){
       .then(res => res.json())
       .then(data => handlePost(...data,[formData]))
     }
-    
-    function handleChange(event) {
-        setFormData({...formData, [event.target.id] : event.target.value,});
 
+    function handleChange(event) {
+      setFormData({...formData, [event.target.id] : event.target.value});
       }
 
     return (

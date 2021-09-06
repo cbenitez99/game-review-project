@@ -14,6 +14,36 @@ function App() {
 
   const [reviews, setReviews] = useState([])
 
+  // const [patchData, setPatchData] = useState({
+  //   likes: parseInt(reviews.likes)
+  // })
+
+  // function handleLikes(){
+  //     const URL = 'http://localhost:3000/games'
+  //     const options = {
+  //       method: "PATCH",
+  //       headers: {'Content-Type':'application/json'},
+  //       body: JSON.stringify(patchData)
+  //     }
+  //     fetch(URL, options)
+  //     .then(res => res.json())
+  //     .then(data => setPatchData(data))
+  //   }
+
+
+  // function handleDislikes (){
+  //   const URL = 'http://localhost:3000/games'
+  //   const options = {
+  //     method: "PATCH",
+  //     headers: {'Content-Type':'application/json'},
+  //     body: JSON.stringify(patchData)
+  //   }
+  //   fetch(URL, options)
+  //   .then(res => res.json())
+  //   .then(data => setPatchData(data))
+  // }
+
+
   function handleDelete(id) {
     const removedReviews = reviews.filter(review => {
       return (review.id !== id)
@@ -26,6 +56,7 @@ function App() {
     fetch(`http://localhost:3000/games/${id}`, options)
   }
 
+  
   useEffect(()=>{
     fetch('http://localhost:3000/games')
     .then(res => res.json())
@@ -33,11 +64,13 @@ function App() {
       setReviews(data)
     })
   }, [])
+
+
   
   function handlePost(newReview){
     setReviews(newReview)
   }
-
+// GameReviewList Props: handleDislikes={handleDislikes} handleLikes={handleLikes}
   return (
     <div className="App">
       
@@ -52,11 +85,11 @@ function App() {
           </Route>
 
           <Route exact path="/games"> 
-            <GameReviewsList reviews={reviews} handleDelete={handleDelete}/>
+            <GameReviewsList reviews={reviews} handleDelete={handleDelete}/> 
           </Route>
 
           <Route exact path="/games/new">
-            <GameReviewForm handlePost={handlePost} reviews={reviews}/>
+            <GameReviewForm handlePost={handlePost}/>
           </Route>
 
         </Switch>

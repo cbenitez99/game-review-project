@@ -1,10 +1,10 @@
 import React from "react";
 import GameCard from './GameCard';
 
-function GameReviewsList({reviews, handleDelete}){
+function GameReviewsList({reviews, handleDelete}){ //, handleLikes, handleDislikes
 
     const mappedReviews = reviews.map((review) => {
-        return <GameCard key={review.id} review={review} handleDelete={handleDelete}/>
+        return <GameCard key={review.id} review={review} handleDelete={handleDelete} /> //handleDislikes={handleDislikes} handleLikes={handleLikes}
     })
 
     return (
