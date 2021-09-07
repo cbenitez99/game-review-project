@@ -1,6 +1,6 @@
 # THE ULTIMATE GAME REVIEWER
 
-It allows you to view, add, and delete your very own game reviews!
+This program allows you to view, add, and delete custom game reviews!
 
 ## Installation
 
