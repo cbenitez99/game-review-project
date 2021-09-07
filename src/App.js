@@ -19,6 +19,7 @@ function App() {
       return (review.id !== id)
     })
     setReviews(removedReviews)
+
     const options = {
       method: "DELETE",
       headers: {'Content-Type':'application/json'},
@@ -35,12 +36,10 @@ function App() {
     })
   }, [])
 
-
-  
   function handlePost(newReview){
     setReviews(newReview)
   }
-  
+
   return (
     <div className="App">
       
