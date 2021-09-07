@@ -6,7 +6,7 @@ It allows you to view, add, and delete your very own game reviews!
 
 Fork and clone this repository and run 'npm install'
 
-You can also fork and clone this <a href="https://github.com/cbenitez99/json-server-template"> base template </a>, and run 'npm server start' 
+You can also fork and clone this <a href="https://github.com/cbenitez99/json-server-template"> base template </a>, and run 'npm install && npm server start' 
 
 ## Getting Started with Create React App
 
