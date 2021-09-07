@@ -1,7 +1,6 @@
 import React from "react"
 
-function GameCard({review, handleDelete}){ //, handleLikes, handleDislikes
-
+function GameCard({review, handleDelete}) { 
 
     return (
         <div className="game-card">
@@ -15,8 +14,6 @@ function GameCard({review, handleDelete}){ //, handleLikes, handleDislikes
             <br/>
             <button onClick={()=> handleDelete(review.id)}>Remove Review</button>
             <br/>
-            {/* <button onClick={handleLikes}> Likes 👍: {review.likes}</button>
-            <button onClick={handleDislikes}> Dislikes 👎: {review.likes}</button> */}
         </div>
     )
 }

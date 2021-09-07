@@ -14,36 +14,6 @@ function App() {
 
   const [reviews, setReviews] = useState([])
 
-  // const [patchData, setPatchData] = useState({
-  //   likes: parseInt(reviews.likes)
-  // })
-
-  // function handleLikes(){
-  //     const URL = 'http://localhost:3000/games'
-  //     const options = {
-  //       method: "PATCH",
-  //       headers: {'Content-Type':'application/json'},
-  //       body: JSON.stringify(patchData)
-  //     }
-  //     fetch(URL, options)
-  //     .then(res => res.json())
-  //     .then(data => setPatchData(data))
-  //   }
-
-
-  // function handleDislikes (){
-  //   const URL = 'http://localhost:3000/games'
-  //   const options = {
-  //     method: "PATCH",
-  //     headers: {'Content-Type':'application/json'},
-  //     body: JSON.stringify(patchData)
-  //   }
-  //   fetch(URL, options)
-  //   .then(res => res.json())
-  //   .then(data => setPatchData(data))
-  // }
-
-
   function handleDelete(id) {
     const removedReviews = reviews.filter(review => {
       return (review.id !== id)
@@ -70,7 +40,7 @@ function App() {
   function handlePost(newReview){
     setReviews(newReview)
   }
-// GameReviewList Props: handleDislikes={handleDislikes} handleLikes={handleLikes}
+  
   return (
     <div className="App">
       
