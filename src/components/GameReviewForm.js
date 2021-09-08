@@ -26,7 +26,7 @@ function GameReviewForm ({handlePost}){
 
     function handleChange(event) {
       setFormData({...formData, [event.target.id] : event.target.value});
-      }
+    }
 
     return (
         <form onSubmit={handleSubmit}>
@@ -44,7 +44,7 @@ function GameReviewForm ({handlePost}){
             <br/>
             <input id="user" type="text" placeholder="Enter Your Name" onChange={handleChange} value={formData.user}/>
             <br/>
-            <button id="button" type="submit">Add Review</button>
+            <button id="button" type="submit" onClick={()=> alert("Your review has been added!")}>Add Review</button>
         </form>
     )
 }

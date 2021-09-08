@@ -12,7 +12,7 @@ function GameCard({review, handleDelete}) {
             <h5>"{review.review}"</h5>
             <p> -{review.user}</p>
             <br/>
-            <button onClick={()=> handleDelete(review.id)}>Remove Review</button>
+            <button onClick={() => handleDelete(review.id)}>Remove Review</button>
             <br/>
         </div>
     )
