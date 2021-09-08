@@ -9,7 +9,8 @@ function GameReviewForm ({handlePost}){
     price: "",
     platform: "",
     review: "",
-    user: ""
+    user: "",
+    likes: 0
   })
 
     function handleSubmit(){

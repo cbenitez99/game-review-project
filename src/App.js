@@ -47,16 +47,17 @@ function App() {
 
         <Switch>
 
-          <Route exact path="/">
-            <Home/>
+          <Route path="/games/new">
+              <GameReviewForm handlePost={handlePost}/>
           </Route>
 
-          <Route exact path="/games">
+
+          <Route path="/games">
             <GameReviewsList reviews={reviews} handleDelete={handleDelete}/> 
           </Route>
 
-          <Route exact path="/games/new">
-            <GameReviewForm handlePost={handlePost}/>
+          <Route path="/">
+            <Home/>
           </Route>
 
         </Switch>

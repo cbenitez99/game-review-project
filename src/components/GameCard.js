@@ -2,6 +2,15 @@ import React from "react"
 
 function GameCard({review, handleDelete}) { 
 
+    function handleClick(review){
+        const options = {
+            method: "PATCH",
+            headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({likes: review.likes + 1 })
+        }
+        fetch(`http://localhost:3000/games/${review.id}`, options)
+    }
+
     return (
         <div className="game-card">
             <img alt={review.title} src={review.image}/>
@@ -13,6 +22,7 @@ function GameCard({review, handleDelete}) {
             <p> -{review.user}</p>
             <br/>
             <button onClick={() => handleDelete(review.id)}>Remove Review</button>
+            <button onClick={()=> handleClick(review)}> Likes: {review.likes}</button>
             <br/>
         </div>
     )
