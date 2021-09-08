@@ -15,10 +15,8 @@ function App() {
   const [reviews, setReviews] = useState([])
  
   function handleDelete(id) {
-    const removedReviews = reviews.filter(review => {
-      return (review.id !== id)
-    })
-
+    const removedReviews = reviews.filter(review => review.id !== id)
+    
     setReviews(removedReviews)
 
     const options = {
